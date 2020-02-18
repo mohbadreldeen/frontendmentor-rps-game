@@ -1,38 +1,45 @@
-.App {
+
+body{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  padding-top:45px;
+  background: rgb(31,55,87);
+background: radial-gradient(circle, rgba(31,55,87,1) 0%, rgba(19,21,55,1) 100%);
+}
+.score{
+  display: flex;justify-content:space-between;
+  max-width: 700px;
+  border: 1px solid #5E6C84;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 auto;
+  color:#fff;
+}
+.score h1{
+  
+  font-size: 28px;
+  line-height: 24px;
+  font-weight: 600;
+  margin:0;
+}
+.score-number{
+  font-size: 64px;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+  color: #565468;
+  min-width: 150px;
+  padding:20px;text-align: center;
+  font-weight: 700;
+  line-height: 1em;
+
+}
+.score-number label{
+  font-size: 16px;
+  color: #2A45C2;
+  display: block;
+  margin: 0 auto 10px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: 600;
+  flex: 1 1;
+  line-height: 1em;
+  
 }

@@ -3,25 +3,27 @@ import React, { Component } from 'react';
 export default class Score extends Component {
     constructor(props) {
         super(props);
-    
-        // this.onChangeUsername = this.onChangeUsername.bind(this);
-        // this.onChangeDescription = this.onChangeDescription.bind(this);
-        // this.onChangeDuration = this.onChangeDuration.bind(this);
-        // this.onChangeDate = this.onChangeDate.bind(this);
-        // this.onSubmit = this.onSubmit.bind(this);
-    
-        // this.state = {
-        //   username: '',
-        //   description: '',
-        //   duration: 0,
-        //   date: new Date(),
-        //   users: []
-        // }
-      }
+     
+    }
       render() {
         return (
             <div className="score">
-                {this.props.score}
+                <div>
+                    <h1>
+                    ROCK<br />
+                    PAPER<br /> 
+                    SCISSORSH<br />
+                    LIZARD<br />
+                    SPOCK<br /> 
+                    </h1>
+                </div>
+                <div class="score-number">
+                    <label>score</label>
+                    {this.props.score}
+                </div>
+                
+                
+                
             </div>
           );
       }
