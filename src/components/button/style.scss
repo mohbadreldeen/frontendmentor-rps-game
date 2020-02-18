@@ -1,0 +1,86 @@
+$scissors-start:hsl(39, 89%, 49%);
+$scissors-end:hsl(40, 84%, 53%);
+
+$paper-start: hsl(230, 89%, 62%);
+$paper-end: hsl(230, 89%, 65%);
+
+$rock-start: hsl(349, 71%, 52%);
+$rock-end: hsl(349, 70%, 56%);
+
+$lizard-start: hsl(261, 73%, 60%);
+$lizard-end: hsl(261, 72%, 63%);
+
+$spock-start: hsl(189, 59%, 53%);
+$spock-end: hsl(189, 58%, 57%);
+$buttons: ( "scissors": (hsl(39, 89%, 49%) hsl(40, 84%, 53%)),
+            "paper": (hsl(230, 89%, 62%)  hsl(230, 89%, 65%)),
+            "rock": (hsl(349, 71%, 52%) hsl(349, 70%, 56%)),
+            "lizard": (hsl(261, 73%, 60%)  hsl(261, 72%, 63%)),
+            "spock": (hsl(189, 59%, 53%)  hsl(189, 58%, 57%)) );
+
+.button{
+    border:0;
+    display: block;
+    position: relative;
+    width:196px;
+    height:203px;
+    border-radius: 50%;
+    box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    margin:20px auto;
+  }
+  
+  .button-body{
+    position: relative;
+    width:100%;
+    height:calc(100% - 7px);
+    border-radius: 50%;
+    transition: all .2s;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+    @each $button, $colors in $buttons {
+    .button-#{$button}{
+        .button-body{
+            background-color: nth($colors, 2);
+            box-shadow: 0 7px 0px nth($colors, 1);
+        }    
+        }
+    }
+
+ 
+  .button:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top:-25px;
+    left:-25px;
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    border-radius: 50%;
+    background:#fff;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  .button:hover:before{
+    opacity: .05;
+  }
+  .button:active .button-body{
+    box-shadow: 0 0px 0px #2a45c2;
+    height: 100%;
+  
+  }
+  .button-icon-container{
+    width:152px;
+    height:152px;
+    border-radius: 50%;
+    background: rgb(243,243,243);
+    background: linear-gradient(45deg, rgba(243,243,243,1) 0%, rgba(218,218,218,1) 100%);
+    box-shadow: inset 0  7px 0px #BABFD4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

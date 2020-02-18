@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.scss';
 
 export default class Score extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ export default class Score extends Component {
                     SPOCK<br /> 
                     </h1>
                 </div>
-                <div class="score-number">
+                <div className="score-number">
                     <label>score</label>
                     {this.props.score}
                 </div>
