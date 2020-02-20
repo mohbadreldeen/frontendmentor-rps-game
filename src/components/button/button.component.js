@@ -36,9 +36,10 @@ export default class Button extends Component {
     }
       render() {
         let buttonType = this.state.buttonTypes[this.props['button-type']]
-        console.log(buttonType)
+        console.log('this style')
+ console.log(this.props.style)
         return (
-            <a className={`${buttonType.class} button`} href="#">
+            <a style={this.props.style} className={`${buttonType.class} button ${this.props.className}`} href="#">
             <div className="button-body">
                 <div className="button-icon-container">
                     <img src={buttonType.icon} />

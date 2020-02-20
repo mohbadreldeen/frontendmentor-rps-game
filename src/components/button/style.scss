@@ -22,8 +22,8 @@ $buttons: ( "scissors": (hsl(39, 89%, 49%) hsl(40, 84%, 53%)),
     border:0;
     display: block;
     position: relative;
-    width:196px;
-    height:203px;
+    width:143px;
+    height:150px;
     border-radius: 50%;
     box-shadow: 0 3px 3px rgba(0,0,0,.2);
     margin:20px auto;
@@ -68,14 +68,15 @@ $buttons: ( "scissors": (hsl(39, 89%, 49%) hsl(40, 84%, 53%)),
   .button:hover:before{
     opacity: .05;
   }
+   
   .button:active .button-body{
     box-shadow: 0 0px 0px #2a45c2;
     height: 100%;
   
   }
   .button-icon-container{
-    width:152px;
-    height:152px;
+    width:110px;
+    height:110px;
     border-radius: 50%;
     background: rgb(243,243,243);
     background: linear-gradient(45deg, rgba(243,243,243,1) 0%, rgba(218,218,218,1) 100%);

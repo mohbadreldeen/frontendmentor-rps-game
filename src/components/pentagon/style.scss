@@ -1,0 +1,27 @@
+$vertex-height : 150;
+$vertex-width : 143;
+$pentagon-height: 313;
+$pentagon-width: 329;
+ 
+
+.pentagon {
+    position: relative;
+    width: $pentagon-width * 1px;
+    height: $pentagon-height * 1px;
+    top: 150px;
+    margin: 0 auto;
+    background-image: url("./images/bg-pentagon.svg");
+}
+
+
+
+
+.pentagon-vertex {
+    position: absolute;
+    transform-origin: center;
+    margin: 0;
+    
+    top: (($pentagon-height / 2) - ($vertex-height / 2)) * 1px ;
+    left: (($pentagon-width / 2) - ($vertex-width / 2)) * 1px ;
+   
+}
